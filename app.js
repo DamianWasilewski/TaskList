@@ -17,7 +17,7 @@ function loadEventListeners() {
 function addTask(e) {
   if (taskInput.value === '') {
     alert('Please add task in order to proceed');
-  }
+  } else {
   //Create new li element
   const li = document.createElement('li');
   li.className = 'collection-item';
@@ -29,9 +29,10 @@ function addTask(e) {
   li.appendChild(link);
   //Adding li to taskList
   taskList.appendChild(li);
-  taskInput.value = null;
+  taskInput.value = '';
 
   e.preventDefault();
+  }
 }
 
 
